@@ -1,0 +1,12 @@
+#submit {
+    right: 110px;
+    position: absolute;
+}
+
+#back {
+    width: 60px;
+}
+
+.card-header {
+    background-color: rgb(16,81,134);
+}

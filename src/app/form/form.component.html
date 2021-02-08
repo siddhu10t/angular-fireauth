@@ -1,0 +1,203 @@
+<div class="container">
+    <h5>This form is designed to gather information in preparation for the COVID-19 vaccination process.</h5>
+    <form [formGroup]="profileForm" (ngSubmit)="onFormSubmit();">
+      <div class="card">
+        <h5 class="card-header text-white">About You</h5>
+        <div class="card-body">
+          <div class="row row-content">
+            <div class="col-4 form-group">
+              <label for="firstName" class="form-label">First Name</label>
+              <input class="form-control" id="firstName" formControlName="firstName">
+            </div>
+            <div class="col-4 form-group">
+              <label for="middleName" class="form-label">Middle Name</label>
+              <input class="form-control" id="middleName" formControlName="middleName">
+            </div>
+            <div class="col-4 form-group">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input class="form-control" id="lastName" formControlName="lastName">
+            </div>
+          </div>
+  
+          <div class="row row-content">
+            <div class="col-4 form-group">
+              <label for="dateOfBirth" class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" formControlName="dateOfBirth">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <h5 class="card-header text-white">Contact Information</h5>
+        <div class="card-body">
+          <div class="row row-content">
+            <div class="col-4 form-group">
+              <label for="addressLine1" class="form-label">Address Line 1</label>
+              <input class="form-control" id="addressLine1" formControlName="addressLine1">
+            </div>
+            <div class="col-4 form-group">
+              <label for="addressLine2" class="form-label">Address Line 2</label>
+              <input class="form-control" id="addressLine2" formControlName="addressLine2">
+            </div>
+            <div class="col-4 form-group">
+              <label for="city" class="form-label">City</label>
+              <input class="form-control" id="city" formControlName="city">
+            </div>
+          </div>
+  
+          <div class="row row-content">
+            <div class="col-4 form-group">
+              <label for="county" class="form-label">County</label>
+              <select class="form-select" formControlName="county">
+                <option selected></option>
+                <option value="1">Cook County</option>
+                <option value="2">Los Angeles County</option>
+                <option value="3">San Diego County</option>
+                <option value="4">Denver</option>
+                <option value="5">King County</option>
+              </select>
+            </div>
+            <div class="col-4 form-group">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" formControlName="state">
+                <option selected></option>
+                <option value="1">California</option>
+                <option value="2">Texas</option>
+                <option value="3">Florida</option>
+                <option value="4">New York</option>
+                <option value="5">Missouri</option>
+              </select>
+            </div>
+            <div class="col-4 form-group">
+              <label for="zipcode" class="form-label">Zip Code</label>
+              <input class="form-control" id="zipcode" formControlName="zipcode">
+            </div>
+          </div>
+  
+          <div class="row row-content">
+            <div class="col-4 form-group">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" formControlName="country">
+                <option selected></option>
+                <option value="1">US</option>
+                <option value="2">India</option>
+                <option value="3">England</option>
+                <option value="4">France</option>
+                <option value="5">Spain</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="row row-content">
+            <div class="col-4 form-group">
+              <label for="prefLang" class="form-label">Preferred Language</label>
+              <select class="form-select" formControlName="prefLang">
+                <option selected></option>
+                <option value="1">English</option>
+                <option value="2">Spanish</option>
+                <option value="3">Latin</option>
+                <option value="4">French</option>
+                <option value="5">German</option>
+              </select>
+            </div>
+            <div class="col-4 form-group">
+              <label for="prefContact" class="form-label">Preferred Method Of Contact</label>
+              <select class="form-select" formControlName="prefContact">
+                <option selected></option>
+                <option value="1">Email</option>
+                <option value="2">Phone Number</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="row row-content">
+            <div class="col-4 form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input class="form-control" id="email" formControlName="email">
+            </div>
+            <div class="col-4 form-group">
+              <label for="confirmEmail" class="form-label">Confirm Email Address</label>
+              <input class="form-control" id="confirmEmail" formControlName="confirmEmail">
+            </div>
+            <div class="col-4 form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input class="form-control" id="phone" formControlName="phone">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <h5 class="card-header text-white">Identification Information</h5>
+        <div class="card-body">
+          <div class="row row-content">
+            <i><p>Providing this information not required but helps improve our ability to communicate with you.</p></i>
+          </div>
+    
+          <div class="row row-content">
+            <div class="form-group">
+              <label for="license" class="form-label">Please Enter State ID/ Drivers License number</label>
+              <input class="form-control" id="license" formControlName="license">
+            </div>
+          </div>
+    
+          <div class="row row-content">
+              <div class="form-group">
+                <label for="licFromFlorida" class="form-label">Is your State ID/ Drivers License from Florida?</label>
+              <label class="radio-inline"><input type="radio" name="yes">Yes</label>
+              <label class="radio-inline"><input type="radio" name="no">No</label>
+              </div>
+          </div>
+    
+          <div class="row row-content">
+              <div class="form-group">
+                <label for="licAddressCurrent" class="form-label">Is your State ID/ Drivers License address current?</label>
+              <label class="radio-inline"><input type="radio" name="yes">Yes</label>
+              <label class="radio-inline"><input type="radio" name="no">No</label>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h5 class="card-header text-white">Attestation</h5>
+        <div class="card-body">
+          <div class="row row-content">
+            <p>Consent to Disclose:</p>
+          </div>
+          <div class="row row-content">
+            <p>I verify that the information provided above is accurate and that the information through this website and/or application and the disclosure of such information for the purpose stated above are subject to the requirements of the Florida State Internet Security and Privacy Act</p>
+          </div>
+          <div class="row row-content">
+            <p>In reviewing and selecting the attestation checkbox, I give my consent for the services that I am requesting from the Florida State Department of Health and its entities/contractors.</p>
+          </div>
+          <div class="row row-content">
+            <p>Florida Department of Health may disclose personal information without applicant consent if the collection or disclosure is: (1) necessary to perform the statutory duties of Florida Department of Health, or necessary for Florida Department of Health to operate a program authorized by law, or authorized by state or federal statute or regulation; (2) made pursuant to a court order or by law; (3) for the purpose of validating the identity of the applicant; or (4) of information to be used solely for statistical purposes that is in a form that cannot be used to identify any particular person.</p>
+          </div>
+          <div class="row row-content">
+            <p>Any information collected through this form is also subject to the Florida State Freedom of Information Law and the Personal Privacy Protection Law.</p>
+          </div>
+          <div class="row row-content">
+            <p>Florida Department of Health will enforce its rights against any unauthorized access or attempted unauthorized access to Florida Department of Health information technology assets or against any other inappropriate use of this website.</p>
+          </div>
+    
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="consent" formControlName="consent">
+              <label class="form-check-label" for="consent">Consent</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row row-content">
+        <div class="col-2 form-group" id="backdiv">
+          <button type="button" id="back" routerLink="/home" class="btn btn-outline-secondary">Back</button>
+        </div>
+        <div class="col-2 form-group" id="submitdiv">
+          <button type="submit" id="submit" class="btn btn-secondary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
